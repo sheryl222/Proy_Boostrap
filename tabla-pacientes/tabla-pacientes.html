@@ -1,0 +1,75 @@
+<section id="tabla-pacientes" class="padded">
+  <div class="container">
+  <h1>Pacientes</h1>
+    <button type="button"class="btn btn-primary"data-toggle="modal"data-target="#categoriasmodal" >Registrate Ahora</button>
+  <hr>
+
+
+  <form id="formulario-editar">
+    <div class="form-group"><input type="text"class="form-control"id="txtidPacienteEditar" disabled/>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" id="txtNombreEditar"/>
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" id="txtDniEditar"/>
+    </div>
+    <div class="form-group">
+      <button type="button" class="btn btn-primary" id="btnActualizar">Actualizar</button>
+      <button type="button" class="btn btn-dark" id="btnCerrar">Cerrar</button>
+    </div>
+  </form>
+
+
+    <table class="table table-striped table-bordered table-hover table-light">
+      <thead class="thead-dark">
+        
+          <tr>
+          <th>Id</th>
+          <th>Nombre</th>
+         <th> Dni </th>
+         
+        
+      </thead>
+      <tbody id="tbody-tabla-pacientes"></tbody>
+    </table>
+  </div>
+ 
+  <!-- container -->
+</section>
+
+<!-- Modal -->
+
+
+<div class="modal fade"id="categoriasmodal"tabindex="-1"role="dialog"aria-labelledby="exampleModalLabel"aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Separe su Cita</h5>
+        <button type="button"class="close"data-dismiss="modal"aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group"> <input type="text"class="form-control"id="txtNombre"placeholder="Nombres"/>
+        </div>
+     
+        <div class="form-group"> <input type="text"class="form-control"id="txtDni"placeholder="Dni"/>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary"data-dismiss="modal"id="btn-close">Cerrar</button>
+        <button type="button" class="btn btn-dark" id="btn-guardar">Enviar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+  <script>
+    var url = "tabla-pacientes/tabla-pacientes.js";
+    $.getScript(url);
+  </script>
+</div>
+
